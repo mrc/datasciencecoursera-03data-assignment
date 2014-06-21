@@ -71,7 +71,7 @@ readDataSet <- function(...) {
         rbind(test_data, training_data)
 }
 
-data_set <- readDataSet(nrows=3)
+data_set <- readDataSet(nrows=-1)
 
 # Split into separate measurement variable per row
 ds <- melt(data_set, id=c("subject", "activity"),

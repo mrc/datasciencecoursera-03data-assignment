@@ -49,3 +49,6 @@ detail in the file "features_info.txt" which accompanies that dataset.
 As the underlying variables have been normalized to the range [-1,1], these
 averages also fall within this range.
 
+With 66 variables, plus the identifying columns "subject" and "activity",
+the data will have 68 columns. With 6 activities and 30 subjects, there
+are 180 rows.
