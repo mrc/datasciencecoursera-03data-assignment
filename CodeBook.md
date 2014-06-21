@@ -15,13 +15,51 @@ file which corresponds to step 5 of the assignment.
 tidy.txt has the following columns:
 
 - "subject": the subject identifier
-- "activity": the activity name (WALKING, WALKING_UPSTAIRS,
-  WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING)
+- "activity": the activity name (`WALKING`, `WALKING_UPSTAIRS`,
+  `WALKING_DOWNSTAIRS`, `SITTING`, `STANDING`, `LAYING`)
 - A column for the measurements on the mean and standard deviation of the
   underlying data set, containing the mean of the measurement for each
-  subject and activity.
+  subject and activity. As the underlying variables have been normalized
+  to the range [-1,1], these averages also fall within this range.
   
-## Measurements
+## Variables
+
+Variables represent factors of signals in the time and frequency domains
+(indicated by a prefix of "t" or "f") from the accelerometer and gyroscopic
+sensors of the Samsung Galaxy S.
+
+Components of 3-axial signals are separated into "-X", "-Y" and "-Z"
+variables.
+
+The variables are (with "-X", "-Y" and "-Z" variables summarised as "-XYZ"):
+
+- tBodyAcc-XYZ
+- tGravityAcc-XYZ
+- tBodyAccJerk-XYZ
+- tBodyGyro-XYZ
+- tBodyGyroJerk-XYZ
+- tBodyAccMag
+- tGravityAccMag
+- tBodyAccJerkMag
+- tBodyGyroMag
+- tBodyGyroJerkMag
+- fBodyAcc-XYZ
+- fBodyAccJerk-XYZ
+- fBodyGyro-XYZ
+- fBodyAccMag
+- fBodyAccJerkMag
+- fBodyGyroMag
+- fBodyGyroJerkMag
+
+The variables captured in the generated data set are:
+- mean(): Mean value
+- std(): Standard deviation
+
+With 66 variables, plus the identifying columns "subject" and "activity",
+the data will have 68 columns. With 6 activities and 30 subjects, there
+are 180 rows.
+
+The complete set of variables is:
 
 ```
  [1] "tBodyAcc-mean()-X"           "tBodyAcc-mean()-Y"           "tBodyAcc-mean()-Z"           "tBodyAcc-std()-X"           
@@ -45,10 +83,3 @@ tidy.txt has the following columns:
 
 These variable names come from the underlying dataset, and are explained in
 detail in the file "features_info.txt" which accompanies that dataset.
-
-As the underlying variables have been normalized to the range [-1,1], these
-averages also fall within this range.
-
-With 66 variables, plus the identifying columns "subject" and "activity",
-the data will have 68 columns. With 6 activities and 30 subjects, there
-are 180 rows.
